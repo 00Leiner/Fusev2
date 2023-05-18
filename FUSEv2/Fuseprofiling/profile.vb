@@ -159,7 +159,17 @@ Public Class profile
             Dim occupationstat As String = row.Cells("OCCUPATIONSTATUS").Value.ToString()
             Dim contact As String = row.Cells("CONTACT").Value.ToString()
             Dim sname As String = String.Format("{0} {1}", row.Cells("FIRSTNAME").Value.ToString(), row.Cells("SURNAME").Value.ToString())
-            Dim imageData As Byte() = DirectCast(row.Cells("Images").Value, Byte())
+            Dim imageData As Byte()
+
+            If TypeOf row.Cells("Images").Value Is Byte() Then
+                imageData = DirectCast(row.Cells("Images").Value, Byte())
+            ElseIf TypeOf row.Cells("Images").Value Is String Then
+                ' Assuming the value is a string representing the byte array, you can use appropriate conversion methods
+                imageData = Convert.FromBase64String(row.Cells("Images").Value.ToString())
+            Else
+                ' Handle the case when the value is neither a Byte() nor a String
+                ' You might want to show an error message or take appropriate action here
+            End If
 
             ' Convert the byte array to an Image object
             Using ms As New MemoryStream(imageData)

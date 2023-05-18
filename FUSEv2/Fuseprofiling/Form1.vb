@@ -49,8 +49,4 @@ Public Class Form1
         Application.Exit()
     End Sub
 
-    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        signup.Show()
-        Me.Hide()
-    End Sub
 End Class
