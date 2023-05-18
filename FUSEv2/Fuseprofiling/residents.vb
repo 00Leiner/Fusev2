@@ -186,38 +186,5 @@ Public Class residents
             Form1.Show()
         End If
     End Sub
-    Private Sub personalinfo_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles personalinfo.CellContentClick
-        If e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = personalinfo.Rows(e.RowIndex)
-            Dim househld As String = row.Cells("HOUSEHOLD").Value.ToString()
-            Dim Fname As String = String.Format("{0} {1} {2}", row.Cells("FIRSTNAME").Value.ToString(), row.Cells("MIDDLENAME").Value.ToString(), row.Cells("SURNAME").Value.ToString())
-            Dim suf As String = row.Cells("SUFFIX").Value.ToString()
-            Dim address As String = String.Format("Purok {0}, {1}", row.Cells("PUROK").Value.ToString(), row.Cells("ADDRESS").Value.ToString())
-            Dim sex As String = row.Cells("SEX").Value.ToString()
-            Dim civilstat As String = row.Cells("CIVILSTATUS").Value.ToString()
-            Dim bdate As String = row.Cells("BIRTHDATE").Value.ToString()
-            Dim occupationstat As String = row.Cells("OCCUPATIONSTATUS").Value.ToString()
-            Dim contact As String = row.Cells("CONTACT").Value.ToString()
-            Dim sname As String = String.Format("{0} {1}", row.Cells("FIRSTNAME").Value.ToString(), row.Cells("SURNAME").Value.ToString())
-            Dim imageData As Byte() = DirectCast(row.Cells("Images").Value, Byte())
 
-            ' Convert the byte array to an Image object
-            Using ms As New MemoryStream(imageData)
-                Dim image As Image = Image.FromStream(ms)
-
-                ' Display the image in the PictureBox
-                profile.PictureBox1.Image = image
-                'Display the data in the panel
-                profile.lblhousehold.Text = househld
-                profile.lblname.Text = Fname
-                profile.lblsex.Text = sex
-                profile.lblcivil.Text = civilstat
-                profile.lbloccupation.Text = occupationstat
-                profile.lblbirthdate.Text = bdate
-                profile.lblcontact.Text = contact
-                profile.lbladdress.Text = address
-                profile.lblsname.Text = sname
-            End Using
-        End If
-    End Sub
 End Class

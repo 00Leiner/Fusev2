@@ -13,8 +13,7 @@ Public Class registry
     'adapting query
     Dim adapter As OleDbDataAdapter = New OleDbDataAdapter("SELECT * FROM infostb", conn)
 
-    ' Declare a global variable to hold the video source object
-    Private videoSource As VideoCaptureDevice
+
 
     Sub columnvisible(tof)
 
@@ -74,13 +73,14 @@ Public Class registry
     End Sub
 
     Private Sub captured(sender As Object, eventargs As NewFrameEventArgs)
-        'shows the preview from camera
+        bmp = DirectCast(eventargs.Frame.Clone(), Bitmap)
         PictureBox5.Image = DirectCast(eventargs.Frame.Clone(), Bitmap)
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         'shows the generated image
         PictureBox6.Image = PictureBox5.Image
+
     End Sub
 
     Private Sub save_Click(sender As Object, e As EventArgs) Handles save.Click
@@ -125,8 +125,8 @@ Public Class registry
             MessageBox.Show("Invalid Phone Number")
         End If
         If PictureBox6.Image Is Nothing Then
-            MessageBox.Show("Please take a picture.")
-
+            MessageBox.Show("Please take a picture")
+            Return
         End If
 
         'declare variables
@@ -144,6 +144,8 @@ Public Class registry
         Dim CONTACT As String = contactbox.Text
 
         Dim ms As New MemoryStream()
+        bmp = PictureBox6.Image
+        bmp.Save(ms, Imaging.ImageFormat.Jpeg)
         Dim imageBytes() As Byte = ms.ToArray()
 
 
@@ -172,9 +174,7 @@ Public Class registry
 
                 'message box if the insertion is successfully inserted
                 MessageBox.Show("RECORD INSERTED SUCCESSFULLY.", "INSERT", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                If PictureBox6.Image Is Nothing = False Then
-                    PictureBox6.Image.Save(ms, Imaging.ImageFormat.Jpeg)
-                End If
+
                 'clear the inputed text 
                 clearText()
 
@@ -302,8 +302,6 @@ Public Class registry
             camera = cameras.VideoDevice
             AddHandler camera.NewFrame, New NewFrameEventHandler(AddressOf captured)
             camera.Start()
-        Else
-            MessageBox.Show("No camera/video devices found.")
         End If
 
     End Sub
@@ -319,6 +317,4 @@ Public Class registry
         End If
 
     End Sub
-
-
 End Class
