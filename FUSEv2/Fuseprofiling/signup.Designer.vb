@@ -43,7 +43,8 @@ Partial Class signup
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Schoolbook", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.IndianRed
-        Me.Label4.Location = New System.Drawing.Point(706, 9)
+        Me.Label4.Location = New System.Drawing.Point(1059, 14)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(34, 32)
         Me.Label4.TabIndex = 17
@@ -55,7 +56,8 @@ Partial Class signup
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Schoolbook", 32.0!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(486, 76)
+        Me.Label3.Location = New System.Drawing.Point(729, 117)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(211, 50)
         Me.Label3.TabIndex = 16
@@ -67,7 +69,8 @@ Partial Class signup
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("SimSun-ExtB", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label2.Location = New System.Drawing.Point(464, 238)
+        Me.Label2.Location = New System.Drawing.Point(696, 366)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(88, 16)
         Me.Label2.TabIndex = 15
@@ -79,7 +82,8 @@ Partial Class signup
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("SimSun-ExtB", 12.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label1.Location = New System.Drawing.Point(464, 154)
+        Me.Label1.Location = New System.Drawing.Point(696, 237)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(88, 16)
         Me.Label1.TabIndex = 14
@@ -90,10 +94,10 @@ Partial Class signup
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(396, 238)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox2.Location = New System.Drawing.Point(594, 366)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(55, 51)
+        Me.PictureBox2.Size = New System.Drawing.Size(82, 78)
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
         '
@@ -102,39 +106,39 @@ Partial Class signup
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(396, 154)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.PictureBox1.Location = New System.Drawing.Point(594, 237)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(55, 51)
+        Me.PictureBox1.Size = New System.Drawing.Size(82, 78)
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
         'passbox
         '
         Me.passbox.Font = New System.Drawing.Font("SimSun-ExtB", 19.8!)
-        Me.passbox.Location = New System.Drawing.Point(467, 255)
-        Me.passbox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.passbox.Location = New System.Drawing.Point(700, 392)
+        Me.passbox.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.passbox.Name = "passbox"
         Me.passbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.passbox.Size = New System.Drawing.Size(246, 34)
+        Me.passbox.Size = New System.Drawing.Size(367, 34)
         Me.passbox.TabIndex = 11
         '
         'userbox
         '
         Me.userbox.Font = New System.Drawing.Font("SimSun-ExtB", 19.8!)
-        Me.userbox.Location = New System.Drawing.Point(467, 171)
-        Me.userbox.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.userbox.Location = New System.Drawing.Point(700, 263)
+        Me.userbox.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.userbox.Name = "userbox"
-        Me.userbox.Size = New System.Drawing.Size(246, 34)
+        Me.userbox.Size = New System.Drawing.Size(367, 34)
         Me.userbox.TabIndex = 10
         '
         'loginbtn
         '
         Me.loginbtn.Font = New System.Drawing.Font("Century Schoolbook", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.loginbtn.Location = New System.Drawing.Point(591, 314)
-        Me.loginbtn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.loginbtn.Location = New System.Drawing.Point(831, 462)
+        Me.loginbtn.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.loginbtn.Name = "loginbtn"
-        Me.loginbtn.Size = New System.Drawing.Size(122, 43)
+        Me.loginbtn.Size = New System.Drawing.Size(183, 66)
         Me.loginbtn.TabIndex = 9
         Me.loginbtn.Text = "Register"
         Me.loginbtn.UseVisualStyleBackColor = True
@@ -145,7 +149,8 @@ Partial Class signup
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.LinkLabel1.Location = New System.Drawing.Point(468, 361)
+        Me.LinkLabel1.Location = New System.Drawing.Point(702, 555)
+        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(245, 17)
         Me.LinkLabel1.TabIndex = 18
@@ -154,11 +159,11 @@ Partial Class signup
         '
         'signup
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(752, 450)
+        Me.ClientSize = New System.Drawing.Size(1128, 692)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -171,7 +176,7 @@ Partial Class signup
         Me.Controls.Add(Me.loginbtn)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.Name = "signup"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "register"

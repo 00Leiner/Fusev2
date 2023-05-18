@@ -22,7 +22,13 @@ Public Class signup
 
         'inserting data to the db
         Dim mycmd As New OleDbCommand("Insert into Account(Uname, passw) Values ('" & userbox.Text & "' , '" & passbox.Text & "')", conn)
+
+
+
+
         If MsgBox("Registration Successful") Then
+
+
         End If
 
         Try
