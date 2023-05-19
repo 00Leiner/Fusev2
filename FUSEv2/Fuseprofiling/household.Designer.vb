@@ -38,6 +38,7 @@ Partial Class household
         '
         'HouseholdData
         '
+        Me.HouseholdData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.HouseholdData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.HouseholdData.Location = New System.Drawing.Point(20, 16)
         Me.HouseholdData.Name = "HouseholdData"

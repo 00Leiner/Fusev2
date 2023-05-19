@@ -314,7 +314,7 @@ Partial Class residents
         Me.viewall.Name = "viewall"
         Me.viewall.Size = New System.Drawing.Size(148, 56)
         Me.viewall.TabIndex = 5
-        Me.viewall.Text = "View All"
+        Me.viewall.Text = "View"
         Me.viewall.UseVisualStyleBackColor = True
         '
         'deletebtn

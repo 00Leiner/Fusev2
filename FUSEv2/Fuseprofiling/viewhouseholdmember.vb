@@ -7,6 +7,7 @@ Public Class viewhouseholdmember
     Dim conn As OleDbConnection = DatabaseConnection.GetConnection()
 
     Public Sub New(selectedHousehold As String)
+
         ' Initialize the form and set the values of the corresponding controls
         InitializeComponent()
         householdID.Text = selectedHousehold

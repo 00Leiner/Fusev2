@@ -1,8 +1,8 @@
 ﻿Imports System.Data.OleDb
-Imports AForge
 Imports AForge.Video
 Imports AForge.Video.DirectShow
 Imports System.IO
+
 Public Class registry
     'setup connection for camera
     Dim camera As VideoCaptureDevice
@@ -37,8 +37,6 @@ Public Class registry
     Private Sub residents_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         'full row will be selected
         householdmember.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        'clear the inputed text 
-        clearText()
 
         'showing data in datagridview
         Dim table As New DataTable()
@@ -85,12 +83,12 @@ Public Class registry
 
     Private Sub save_Click(sender As Object, e As EventArgs) Handles save.Click
         'hold the user if the box is empty
-        If String.IsNullOrEmpty(firstbox.Text) Then
-            MessageBox.Show("Please fill the First Name.")
-            Return
-        End If
         If String.IsNullOrEmpty(surnamebox.Text) Then
             MessageBox.Show("Please fill the Surname")
+            Return
+        End If
+        If String.IsNullOrEmpty(firstbox.Text) Then
+            MessageBox.Show("Please fill the First Name.")
             Return
         End If
         If String.IsNullOrEmpty(middlebox.Text) Then
@@ -105,12 +103,21 @@ Public Class registry
             MessageBox.Show("Please fill the Purok.")
             Return
         End If
-        If String.IsNullOrEmpty(civilstatusbox.Text) Then
-            MessageBox.Show("Please fill the Civil Status.")
+        Dim Bdate As DateTime
+        If Not DateTime.TryParse(birthdatepicker.Text, Bdate) Then
+            MessageBox.Show("Invalid Birthdate")
             Return
         End If
         If String.IsNullOrEmpty(sexbox.Text) Then
             MessageBox.Show("Please fill the Gender.")
+            Return
+        End If
+        If String.IsNullOrEmpty(occupationstatusbox.Text) Then
+            MessageBox.Show("Please fill the Occupation Status.")
+            Return
+        End If
+        If String.IsNullOrEmpty(civilstatusbox.Text) Then
+            MessageBox.Show("Please fill the Civil Status.")
             Return
         End If
         If String.IsNullOrEmpty(contactbox.Text) Then
@@ -137,7 +144,7 @@ Public Class registry
         Dim HOUSEHOLD As String = householdbox.Text
         Dim PUROK As String = purokbox.Text
         Dim ADDRESS As String = addressbox.Text
-        Dim BIRTHDATE As String = birthdatepicker.Text
+        Dim BIRTHDATE As DateTime = Bdate
         Dim SEX As String = sexbox.Text
         Dim OCCUPATIONSTATUS As String = occupationstatusbox.Text
         Dim CIVILSTATUS As String = civilstatusbox.Text
@@ -268,28 +275,28 @@ Public Class registry
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
         Dim logout As DialogResult = MessageBox.Show("Are you sure you want to logout?", "logout", MessageBoxButtons.YesNo)
         If logout = DialogResult.Yes Then
-            Me.Hide()
+            Me.Close()
             Form1.Show()
         End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'hide this form
-        Me.Hide()
+        Me.Close()
         'back to dashboard
         dashboard.Show()
     End Sub
 
     Private Sub residentsbtn_Click(sender As Object, e As EventArgs) Handles residentsbtn.Click
         'hide this form
-        Me.Hide()
+        Me.Close()
         'back to dashboard
         residents.Show()
     End Sub
 
     Private Sub demographicsbtn_Click(sender As Object, e As EventArgs) Handles demographicsbtn.Click
         'hide this form
-        Me.Hide()
+        Me.Close()
         'back to dashboard
         demographics.Show()
     End Sub
@@ -315,6 +322,11 @@ Public Class registry
         If DateTime.Now < selectedDate.AddYears(age) Then
             age -= 1 ' Reduce the age by 1 if the birthday hasn't occurred yet this year
         End If
-
     End Sub
+
+    Private Sub registry_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        'cleare everytime the form closed
+        clearText()
+    End Sub
+
 End Class

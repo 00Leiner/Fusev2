@@ -1,6 +1,5 @@
 ﻿Imports System.Data.OleDb
 Imports System.IO
-Imports System.Windows
 
 Public Class residents
     'call GetConnection() from dbconnection.vb
@@ -24,6 +23,7 @@ Public Class residents
     Dim OCCUPATIONSTATUS As String
     Dim civilstatus As String
     Dim contact As String
+    Dim selectedImage As Image
 
     Private Sub residents_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         'full row will be selected
@@ -77,7 +77,11 @@ Public Class residents
             birthdate = selectedRow.Cells(10).Value.ToString()
             contact = selectedRow.Cells(11).Value.ToString()
             OCCUPATIONSTATUS = selectedRow.Cells(12).Value.ToString()
-
+            ' Retrieve the image
+            Dim imageData As Byte() = CType(selectedRow.Cells(13).Value, Byte())
+            Using stream As New MemoryStream(imageData)
+                selectedImage = Image.FromStream(stream)
+            End Using
         End If
     End Sub
 
@@ -145,11 +149,25 @@ Public Class residents
     End Sub
 
     Private Sub viewall_Click(sender As Object, e As EventArgs) Handles viewall.Click
+        ' Check if any cell is selected
+        If personalinfo.SelectedCells.Count = 0 Then
+            MessageBox.Show("Please select a cell to view.")
+
+            'clear the search bar 
+            search.Text = String.Empty
+            Return
+
+        End If
+        ' send the data clicked from the datagridview and send it to updateform
+        Dim profile As New profile(ID, surname, firstname, middlename, suffix, household, purok, address, birthdate, sex, OCCUPATIONSTATUS, civilstatus, contact, selectedImage)
+
+        'hide this form
+        Me.Hide()
+
         'clear the search bar 
         search.Text = String.Empty
-        'navigate to viewform
-        profile.UpdateDataGridView("All")
-        profile.ShowDialog()
+
+        profile.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
