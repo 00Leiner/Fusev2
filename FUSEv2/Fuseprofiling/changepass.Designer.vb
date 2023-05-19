@@ -39,10 +39,11 @@ Partial Class changepass
         'usernametextbox
         '
         Me.usernametextbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.usernametextbox.Location = New System.Drawing.Point(380, 175)
+        Me.usernametextbox.Location = New System.Drawing.Point(253, 114)
+        Me.usernametextbox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.usernametextbox.Multiline = True
         Me.usernametextbox.Name = "usernametextbox"
-        Me.usernametextbox.Size = New System.Drawing.Size(251, 45)
+        Me.usernametextbox.Size = New System.Drawing.Size(169, 31)
         Me.usernametextbox.TabIndex = 0
         '
         'ContextMenuStrip1
@@ -53,11 +54,12 @@ Partial Class changepass
         'currentpasswordbox
         '
         Me.currentpasswordbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.currentpasswordbox.Location = New System.Drawing.Point(380, 237)
+        Me.currentpasswordbox.Location = New System.Drawing.Point(253, 154)
+        Me.currentpasswordbox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.currentpasswordbox.Multiline = True
         Me.currentpasswordbox.Name = "currentpasswordbox"
         Me.currentpasswordbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.currentpasswordbox.Size = New System.Drawing.Size(251, 45)
+        Me.currentpasswordbox.Size = New System.Drawing.Size(169, 31)
         Me.currentpasswordbox.TabIndex = 2
         '
         'changebttn
@@ -65,9 +67,10 @@ Partial Class changepass
         Me.changebttn.FlatAppearance.BorderSize = 0
         Me.changebttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.changebttn.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!)
-        Me.changebttn.Location = New System.Drawing.Point(504, 359)
+        Me.changebttn.Location = New System.Drawing.Point(326, 238)
+        Me.changebttn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.changebttn.Name = "changebttn"
-        Me.changebttn.Size = New System.Drawing.Size(127, 44)
+        Me.changebttn.Size = New System.Drawing.Size(96, 36)
         Me.changebttn.TabIndex = 3
         Me.changebttn.Text = "Change "
         Me.changebttn.UseVisualStyleBackColor = True
@@ -78,7 +81,8 @@ Partial Class changepass
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(315, 106)
+        Me.Label1.Location = New System.Drawing.Point(210, 69)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(236, 31)
         Me.Label1.TabIndex = 4
@@ -89,9 +93,10 @@ Partial Class changepass
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(236, 188)
+        Me.Label2.Location = New System.Drawing.Point(157, 122)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(87, 20)
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Username:"
         '
@@ -100,20 +105,22 @@ Partial Class changepass
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(236, 250)
+        Me.Label3.Location = New System.Drawing.Point(157, 162)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(139, 20)
+        Me.Label3.Size = New System.Drawing.Size(93, 13)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Current Password:"
         '
         'newpasswordbox
         '
         Me.newpasswordbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!)
-        Me.newpasswordbox.Location = New System.Drawing.Point(380, 298)
+        Me.newpasswordbox.Location = New System.Drawing.Point(253, 194)
+        Me.newpasswordbox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.newpasswordbox.Multiline = True
         Me.newpasswordbox.Name = "newpasswordbox"
         Me.newpasswordbox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.newpasswordbox.Size = New System.Drawing.Size(251, 45)
+        Me.newpasswordbox.Size = New System.Drawing.Size(169, 31)
         Me.newpasswordbox.TabIndex = 7
         '
         'closeBttn
@@ -123,9 +130,10 @@ Partial Class changepass
         Me.closeBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.closeBttn.FlatAppearance.BorderSize = 0
         Me.closeBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.closeBttn.Location = New System.Drawing.Point(810, 12)
+        Me.closeBttn.Location = New System.Drawing.Point(540, 8)
+        Me.closeBttn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.closeBttn.Name = "closeBttn"
-        Me.closeBttn.Size = New System.Drawing.Size(45, 45)
+        Me.closeBttn.Size = New System.Drawing.Size(30, 29)
         Me.closeBttn.TabIndex = 45
         Me.closeBttn.UseVisualStyleBackColor = False
         '
@@ -134,19 +142,20 @@ Partial Class changepass
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(236, 309)
+        Me.Label4.Location = New System.Drawing.Point(157, 201)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(117, 20)
+        Me.Label4.Size = New System.Drawing.Size(81, 13)
         Me.Label4.TabIndex = 46
         Me.Label4.Text = "New Password:"
         '
         'changepass
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(867, 506)
+        Me.ClientSize = New System.Drawing.Size(578, 329)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.closeBttn)
         Me.Controls.Add(Me.newpasswordbox)
@@ -158,6 +167,7 @@ Partial Class changepass
         Me.Controls.Add(Me.usernametextbox)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "changepass"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "changepass"

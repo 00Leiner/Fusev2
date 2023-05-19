@@ -306,6 +306,9 @@ Public Class registry
     End Sub
 
     Private Sub registry_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'minimize the setting 
+        droppanel.Size = droppanel.MinimumSize
+
         'to show directly the permission to open camera
         Me.Show()
         Dim cameras As VideoCaptureDeviceForm = New VideoCaptureDeviceForm
@@ -336,13 +339,13 @@ Public Class registry
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         If isCollapsed Then
 
-            droppanel.Height += 10
+            droppanel.Height += 20
             If droppanel.Size = droppanel.MaximumSize Then
                 Timer1.Stop()
                 isCollapsed = False
             End If
         Else
-            droppanel.Height -= 10
+            droppanel.Height -= 20
             If droppanel.Size = droppanel.MinimumSize Then
                 Timer1.Stop()
                 isCollapsed = True

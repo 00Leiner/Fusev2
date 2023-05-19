@@ -242,4 +242,9 @@ Public Class residents
     Private Sub dropbttn2_Click(sender As Object, e As EventArgs) Handles dropbttn2.Click
         changepass.Show()
     End Sub
+
+    Private Sub residents_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'minimize the setting 
+        droppanel.Size = droppanel.MinimumSize
+    End Sub
 End Class
