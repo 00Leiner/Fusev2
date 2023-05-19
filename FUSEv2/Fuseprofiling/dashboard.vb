@@ -117,4 +117,8 @@ Public Class dashboard
             Form1.Show()
         End If
     End Sub
+
+    Private Sub dropbttn2_Click(sender As Object, e As EventArgs) Handles dropbttn2.Click
+        changepass.Show()
+    End Sub
 End Class

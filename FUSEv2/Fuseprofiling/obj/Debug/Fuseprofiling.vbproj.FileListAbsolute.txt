@@ -159,3 +159,4 @@ C:\Users\LEINER\Source\Repos\Fusev2\FUSEv2\Fuseprofiling\obj\Debug\Fuseprofiling
 C:\Users\LEINER\Source\Repos\Fusev2\FUSEv2\Fuseprofiling\obj\Debug\Fuseprofiling.exe
 C:\Users\LEINER\Source\Repos\Fusev2\FUSEv2\Fuseprofiling\obj\Debug\Fuseprofiling.xml
 C:\Users\LEINER\Source\Repos\Fusev2\FUSEv2\Fuseprofiling\obj\Debug\Fuseprofiling.pdb
+C:\Users\ruizb\source\repos\Fusev2\FUSEv2\Fuseprofiling\obj\Debug\Fuseprofiling.changepass.resources

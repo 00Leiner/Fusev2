@@ -22,8 +22,8 @@ Partial Class registry
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(registry))
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -87,7 +87,11 @@ Partial Class registry
         Me.OCCUPATIONSTATUS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CIVILSTATUS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CONTACT = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.droppanel = New System.Windows.Forms.Panel()
+        Me.dropbttn3 = New System.Windows.Forms.Button()
+        Me.dropbttn2 = New System.Windows.Forms.Button()
+        Me.dropbttn1 = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -100,18 +104,8 @@ Partial Class registry
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         CType(Me.householdmember, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.droppanel.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox2.Location = New System.Drawing.Point(1063, 26)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(39, 39)
-        Me.PictureBox2.TabIndex = 35
-        Me.PictureBox2.TabStop = False
         '
         'Label14
         '
@@ -119,7 +113,8 @@ Partial Class registry
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Tahoma", 16.0!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(245, 38)
+        Me.Label14.Location = New System.Drawing.Point(368, 58)
+        Me.Label14.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(498, 27)
         Me.Label14.TabIndex = 36
@@ -131,7 +126,8 @@ Partial Class registry
         Me.Label15.BackColor = System.Drawing.Color.Transparent
         Me.Label15.Font = New System.Drawing.Font("Tahoma", 9.0!)
         Me.Label15.ForeColor = System.Drawing.Color.Silver
-        Me.Label15.Location = New System.Drawing.Point(247, 65)
+        Me.Label15.Location = New System.Drawing.Point(370, 100)
+        Me.Label15.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(283, 14)
         Me.Label15.TabIndex = 37
@@ -142,9 +138,10 @@ Partial Class registry
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(31, 24)
+        Me.PictureBox1.Location = New System.Drawing.Point(46, 37)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(182, 183)
+        Me.PictureBox1.Size = New System.Drawing.Size(273, 282)
         Me.PictureBox1.TabIndex = 38
         Me.PictureBox1.TabStop = False
         '
@@ -159,9 +156,10 @@ Partial Class registry
         Me.create.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.create.Font = New System.Drawing.Font("Tahoma", 12.0!)
         Me.create.ForeColor = System.Drawing.Color.White
-        Me.create.Location = New System.Drawing.Point(31, 329)
+        Me.create.Location = New System.Drawing.Point(46, 506)
+        Me.create.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.create.Name = "create"
-        Me.create.Size = New System.Drawing.Size(213, 65)
+        Me.create.Size = New System.Drawing.Size(320, 100)
         Me.create.TabIndex = 39
         Me.create.Text = "Registry"
         Me.create.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -170,9 +168,10 @@ Partial Class registry
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.Tan
-        Me.Panel6.Location = New System.Drawing.Point(12, 244)
+        Me.Panel6.Location = New System.Drawing.Point(18, 375)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(12, 59)
+        Me.Panel6.Size = New System.Drawing.Size(18, 91)
         Me.Panel6.TabIndex = 40
         '
         'residentsbtn
@@ -184,9 +183,10 @@ Partial Class registry
         Me.residentsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.residentsbtn.Font = New System.Drawing.Font("Tahoma", 12.0!)
         Me.residentsbtn.ForeColor = System.Drawing.Color.White
-        Me.residentsbtn.Location = New System.Drawing.Point(31, 416)
+        Me.residentsbtn.Location = New System.Drawing.Point(46, 640)
+        Me.residentsbtn.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.residentsbtn.Name = "residentsbtn"
-        Me.residentsbtn.Size = New System.Drawing.Size(213, 65)
+        Me.residentsbtn.Size = New System.Drawing.Size(320, 100)
         Me.residentsbtn.TabIndex = 5
         Me.residentsbtn.Text = "Residents"
         Me.residentsbtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -195,9 +195,10 @@ Partial Class registry
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.Tan
-        Me.Panel7.Location = New System.Drawing.Point(12, 419)
+        Me.Panel7.Location = New System.Drawing.Point(18, 645)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(12, 59)
+        Me.Panel7.Size = New System.Drawing.Size(18, 91)
         Me.Panel7.TabIndex = 42
         '
         'demographicsbtn
@@ -207,9 +208,10 @@ Partial Class registry
         Me.demographicsbtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.demographicsbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.demographicsbtn.Font = New System.Drawing.Font("Sitka Text", 9.749999!, CType((System.Drawing.FontStyle.Italic Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.demographicsbtn.Location = New System.Drawing.Point(30, 619)
+        Me.demographicsbtn.Location = New System.Drawing.Point(45, 952)
+        Me.demographicsbtn.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.demographicsbtn.Name = "demographicsbtn"
-        Me.demographicsbtn.Size = New System.Drawing.Size(171, 42)
+        Me.demographicsbtn.Size = New System.Drawing.Size(256, 65)
         Me.demographicsbtn.TabIndex = 43
         Me.demographicsbtn.Text = "demographics"
         Me.demographicsbtn.UseVisualStyleBackColor = False
@@ -225,10 +227,10 @@ Partial Class registry
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Tahoma", 12.0!)
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(31, 241)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Button1.Location = New System.Drawing.Point(46, 371)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(6, 8, 6, 8)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(213, 65)
+        Me.Button1.Size = New System.Drawing.Size(320, 100)
         Me.Button1.TabIndex = 44
         Me.Button1.Text = "Dashboard"
         Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -237,9 +239,10 @@ Partial Class registry
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.SaddleBrown
-        Me.Panel8.Location = New System.Drawing.Point(12, 332)
+        Me.Panel8.Location = New System.Drawing.Point(18, 511)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(12, 59)
+        Me.Panel8.Size = New System.Drawing.Size(18, 91)
         Me.Panel8.TabIndex = 45
         '
         'Panel1
@@ -252,9 +255,10 @@ Partial Class registry
         Me.Panel1.Controls.Add(Me.PictureBox3)
         Me.Panel1.Controls.Add(Me.PictureBox4)
         Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Location = New System.Drawing.Point(245, 95)
+        Me.Panel1.Location = New System.Drawing.Point(368, 146)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(857, 581)
+        Me.Panel1.Size = New System.Drawing.Size(1286, 894)
         Me.Panel1.TabIndex = 46
         '
         'Panel4
@@ -262,9 +266,10 @@ Partial Class registry
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel4.Controls.Add(Me.clear)
         Me.Panel4.Controls.Add(Me.save)
-        Me.Panel4.Location = New System.Drawing.Point(742, 295)
+        Me.Panel4.Location = New System.Drawing.Point(1113, 454)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(95, 271)
+        Me.Panel4.Size = New System.Drawing.Size(140, 415)
         Me.Panel4.TabIndex = 62
         '
         'clear
@@ -272,9 +277,10 @@ Partial Class registry
         Me.clear.Cursor = System.Windows.Forms.Cursors.Hand
         Me.clear.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.clear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!)
-        Me.clear.Location = New System.Drawing.Point(3, 68)
+        Me.clear.Location = New System.Drawing.Point(4, 105)
+        Me.clear.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.clear.Name = "clear"
-        Me.clear.Size = New System.Drawing.Size(85, 46)
+        Me.clear.Size = New System.Drawing.Size(128, 71)
         Me.clear.TabIndex = 29
         Me.clear.Text = "Clear"
         Me.clear.UseVisualStyleBackColor = True
@@ -284,9 +290,10 @@ Partial Class registry
         Me.save.Cursor = System.Windows.Forms.Cursors.Hand
         Me.save.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.save.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.save.Location = New System.Drawing.Point(3, 16)
+        Me.save.Location = New System.Drawing.Point(4, 25)
+        Me.save.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.save.Name = "save"
-        Me.save.Size = New System.Drawing.Size(85, 46)
+        Me.save.Size = New System.Drawing.Size(128, 71)
         Me.save.TabIndex = 28
         Me.save.Text = "Save"
         Me.save.UseVisualStyleBackColor = True
@@ -297,18 +304,20 @@ Partial Class registry
         Me.Panel5.Controls.Add(Me.Button3)
         Me.Panel5.Controls.Add(Me.Label17)
         Me.Panel5.Controls.Add(Me.TableLayoutPanel1)
-        Me.Panel5.Location = New System.Drawing.Point(416, 295)
+        Me.Panel5.Location = New System.Drawing.Point(624, 454)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(325, 271)
+        Me.Panel5.Size = New System.Drawing.Size(486, 415)
         Me.Panel5.TabIndex = 61
         '
         'Button3
         '
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Button3.Location = New System.Drawing.Point(123, 220)
+        Me.Button3.Location = New System.Drawing.Point(184, 338)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 40)
+        Me.Button3.Size = New System.Drawing.Size(112, 62)
         Me.Button3.TabIndex = 36
         Me.Button3.Text = "Capture"
         Me.Button3.UseVisualStyleBackColor = True
@@ -317,7 +326,8 @@ Partial Class registry
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.Label17.Location = New System.Drawing.Point(3, 8)
+        Me.Label17.Location = New System.Drawing.Point(4, 12)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(106, 24)
         Me.Label17.TabIndex = 34
@@ -331,19 +341,21 @@ Partial Class registry
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.PictureBox6, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.PictureBox5, 0, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 42)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(4, 65)
+        Me.TableLayoutPanel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(315, 173)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(472, 266)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'PictureBox6
         '
         Me.PictureBox6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox6.Location = New System.Drawing.Point(161, 4)
+        Me.PictureBox6.Location = New System.Drawing.Point(240, 6)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(150, 165)
+        Me.PictureBox6.Size = New System.Drawing.Size(227, 254)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 1
         Me.PictureBox6.TabStop = False
@@ -351,9 +363,10 @@ Partial Class registry
         'PictureBox5
         '
         Me.PictureBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox5.Location = New System.Drawing.Point(4, 4)
+        Me.PictureBox5.Location = New System.Drawing.Point(5, 6)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(150, 165)
+        Me.PictureBox5.Size = New System.Drawing.Size(226, 254)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 0
         Me.PictureBox5.TabStop = False
@@ -385,16 +398,18 @@ Partial Class registry
         Me.Panel2.Controls.Add(Me.middlebox)
         Me.Panel2.Controls.Add(Me.firstbox)
         Me.Panel2.Controls.Add(Me.surnamebox)
-        Me.Panel2.Location = New System.Drawing.Point(17, 63)
+        Me.Panel2.Location = New System.Drawing.Point(26, 97)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(820, 226)
+        Me.Panel2.Size = New System.Drawing.Size(1228, 346)
         Me.Panel2.TabIndex = 60
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(14, 83)
+        Me.Label5.Location = New System.Drawing.Point(21, 128)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(111, 20)
         Me.Label5.TabIndex = 34
@@ -403,10 +418,11 @@ Partial Class registry
         'householdbox
         '
         Me.householdbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.householdbox.Location = New System.Drawing.Point(18, 109)
+        Me.householdbox.Location = New System.Drawing.Point(27, 168)
+        Me.householdbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.householdbox.MaxLength = 4
         Me.householdbox.Name = "householdbox"
-        Me.householdbox.Size = New System.Drawing.Size(130, 29)
+        Me.householdbox.Size = New System.Drawing.Size(193, 29)
         Me.householdbox.TabIndex = 33
         '
         'suffixbox
@@ -416,9 +432,10 @@ Partial Class registry
         Me.suffixbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.suffixbox.FormattingEnabled = True
         Me.suffixbox.Items.AddRange(New Object() {"", "Sr", "Jr", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "Ma."})
-        Me.suffixbox.Location = New System.Drawing.Point(711, 39)
+        Me.suffixbox.Location = New System.Drawing.Point(1066, 60)
+        Me.suffixbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.suffixbox.Name = "suffixbox"
-        Me.suffixbox.Size = New System.Drawing.Size(89, 32)
+        Me.suffixbox.Size = New System.Drawing.Size(132, 32)
         Me.suffixbox.TabIndex = 32
         '
         'occupationstatusbox
@@ -428,16 +445,18 @@ Partial Class registry
         Me.occupationstatusbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.occupationstatusbox.FormattingEnabled = True
         Me.occupationstatusbox.Items.AddRange(New Object() {"Pensioner", "Employed", "Unemployed", "Self-employed", "Student"})
-        Me.occupationstatusbox.Location = New System.Drawing.Point(164, 175)
+        Me.occupationstatusbox.Location = New System.Drawing.Point(246, 269)
+        Me.occupationstatusbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.occupationstatusbox.Name = "occupationstatusbox"
-        Me.occupationstatusbox.Size = New System.Drawing.Size(196, 32)
+        Me.occupationstatusbox.Size = New System.Drawing.Size(292, 32)
         Me.occupationstatusbox.TabIndex = 31
         '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label12.Location = New System.Drawing.Point(604, 150)
+        Me.Label12.Location = New System.Drawing.Point(906, 231)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(93, 20)
         Me.Label12.TabIndex = 26
@@ -447,7 +466,8 @@ Partial Class registry
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label11.Location = New System.Drawing.Point(382, 150)
+        Me.Label11.Location = New System.Drawing.Point(573, 231)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(91, 20)
         Me.Label11.TabIndex = 25
@@ -457,7 +477,8 @@ Partial Class registry
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label10.Location = New System.Drawing.Point(165, 150)
+        Me.Label10.Location = New System.Drawing.Point(248, 231)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(145, 20)
         Me.Label10.TabIndex = 24
@@ -467,7 +488,8 @@ Partial Class registry
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label9.Location = New System.Drawing.Point(17, 150)
+        Me.Label9.Location = New System.Drawing.Point(26, 231)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(40, 20)
         Me.Label9.TabIndex = 23
@@ -477,7 +499,8 @@ Partial Class registry
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label8.Location = New System.Drawing.Point(650, 83)
+        Me.Label8.Location = New System.Drawing.Point(975, 128)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(78, 20)
         Me.Label8.TabIndex = 22
@@ -487,7 +510,8 @@ Partial Class registry
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label7.Location = New System.Drawing.Point(319, 83)
+        Me.Label7.Location = New System.Drawing.Point(478, 128)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 20)
         Me.Label7.TabIndex = 21
@@ -497,7 +521,8 @@ Partial Class registry
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(170, 83)
+        Me.Label6.Location = New System.Drawing.Point(255, 128)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(54, 20)
         Me.Label6.TabIndex = 20
@@ -507,7 +532,8 @@ Partial Class registry
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label4.Location = New System.Drawing.Point(706, 14)
+        Me.Label4.Location = New System.Drawing.Point(1059, 22)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 20)
         Me.Label4.TabIndex = 18
@@ -517,7 +543,8 @@ Partial Class registry
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label3.Location = New System.Drawing.Point(476, 14)
+        Me.Label3.Location = New System.Drawing.Point(714, 22)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(105, 20)
         Me.Label3.TabIndex = 17
@@ -527,7 +554,8 @@ Partial Class registry
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(244, 14)
+        Me.Label2.Location = New System.Drawing.Point(366, 22)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(90, 20)
         Me.Label2.TabIndex = 16
@@ -537,7 +565,8 @@ Partial Class registry
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(14, 14)
+        Me.Label1.Location = New System.Drawing.Point(21, 22)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 20)
         Me.Label1.TabIndex = 15
@@ -547,9 +576,10 @@ Partial Class registry
         '
         Me.birthdatepicker.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.birthdatepicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.birthdatepicker.Location = New System.Drawing.Point(652, 109)
+        Me.birthdatepicker.Location = New System.Drawing.Point(978, 168)
+        Me.birthdatepicker.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.birthdatepicker.Name = "birthdatepicker"
-        Me.birthdatepicker.Size = New System.Drawing.Size(147, 29)
+        Me.birthdatepicker.Size = New System.Drawing.Size(218, 29)
         Me.birthdatepicker.TabIndex = 14
         Me.birthdatepicker.Value = New Date(2023, 4, 29, 0, 0, 0, 0)
         '
@@ -560,9 +590,10 @@ Partial Class registry
         Me.civilstatusbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.civilstatusbox.FormattingEnabled = True
         Me.civilstatusbox.Items.AddRange(New Object() {"Single ", "Married ", "Divorced ", "Separated ", "Widowed "})
-        Me.civilstatusbox.Location = New System.Drawing.Point(385, 175)
+        Me.civilstatusbox.Location = New System.Drawing.Point(578, 269)
+        Me.civilstatusbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.civilstatusbox.Name = "civilstatusbox"
-        Me.civilstatusbox.Size = New System.Drawing.Size(196, 32)
+        Me.civilstatusbox.Size = New System.Drawing.Size(292, 32)
         Me.civilstatusbox.TabIndex = 13
         '
         'sexbox
@@ -572,9 +603,10 @@ Partial Class registry
         Me.sexbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.sexbox.FormattingEnabled = True
         Me.sexbox.Items.AddRange(New Object() {"Male", "Female"})
-        Me.sexbox.Location = New System.Drawing.Point(18, 175)
+        Me.sexbox.Location = New System.Drawing.Point(27, 269)
+        Me.sexbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.sexbox.Name = "sexbox"
-        Me.sexbox.Size = New System.Drawing.Size(122, 32)
+        Me.sexbox.Size = New System.Drawing.Size(181, 32)
         Me.sexbox.TabIndex = 12
         '
         'purokbox
@@ -584,64 +616,71 @@ Partial Class registry
         Me.purokbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.purokbox.FormattingEnabled = True
         Me.purokbox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        Me.purokbox.Location = New System.Drawing.Point(171, 107)
+        Me.purokbox.Location = New System.Drawing.Point(256, 165)
+        Me.purokbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.purokbox.Name = "purokbox"
-        Me.purokbox.Size = New System.Drawing.Size(121, 32)
+        Me.purokbox.Size = New System.Drawing.Size(180, 32)
         Me.purokbox.TabIndex = 11
         '
         'contactbox
         '
         Me.contactbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.contactbox.Location = New System.Drawing.Point(604, 176)
+        Me.contactbox.Location = New System.Drawing.Point(906, 271)
+        Me.contactbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.contactbox.MaxLength = 11
         Me.contactbox.Name = "contactbox"
-        Me.contactbox.Size = New System.Drawing.Size(196, 29)
+        Me.contactbox.Size = New System.Drawing.Size(292, 29)
         Me.contactbox.TabIndex = 9
         '
         'addressbox
         '
         Me.addressbox.Cursor = System.Windows.Forms.Cursors.No
         Me.addressbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.addressbox.Location = New System.Drawing.Point(319, 109)
+        Me.addressbox.Location = New System.Drawing.Point(478, 168)
+        Me.addressbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.addressbox.Multiline = True
         Me.addressbox.Name = "addressbox"
         Me.addressbox.ReadOnly = True
-        Me.addressbox.Size = New System.Drawing.Size(307, 29)
+        Me.addressbox.Size = New System.Drawing.Size(458, 42)
         Me.addressbox.TabIndex = 5
         Me.addressbox.Text = "Brgy. Masapang, Victory, Laguna"
         '
         'middlebox
         '
         Me.middlebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.middlebox.Location = New System.Drawing.Point(480, 41)
+        Me.middlebox.Location = New System.Drawing.Point(720, 63)
+        Me.middlebox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.middlebox.MaxLength = 50
         Me.middlebox.Name = "middlebox"
-        Me.middlebox.Size = New System.Drawing.Size(214, 29)
+        Me.middlebox.Size = New System.Drawing.Size(319, 29)
         Me.middlebox.TabIndex = 3
         '
         'firstbox
         '
         Me.firstbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.firstbox.Location = New System.Drawing.Point(248, 41)
+        Me.firstbox.Location = New System.Drawing.Point(372, 63)
+        Me.firstbox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.firstbox.MaxLength = 50
         Me.firstbox.Name = "firstbox"
-        Me.firstbox.Size = New System.Drawing.Size(214, 29)
+        Me.firstbox.Size = New System.Drawing.Size(319, 29)
         Me.firstbox.TabIndex = 2
         '
         'surnamebox
         '
         Me.surnamebox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.surnamebox.Location = New System.Drawing.Point(18, 41)
+        Me.surnamebox.Location = New System.Drawing.Point(27, 63)
+        Me.surnamebox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.surnamebox.MaxLength = 50
         Me.surnamebox.Name = "surnamebox"
-        Me.surnamebox.Size = New System.Drawing.Size(214, 29)
+        Me.surnamebox.Size = New System.Drawing.Size(319, 29)
         Me.surnamebox.TabIndex = 0
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(374, 19)
+        Me.Label16.Location = New System.Drawing.Point(561, 29)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(110, 23)
         Me.Label16.TabIndex = 59
@@ -652,9 +691,10 @@ Partial Class registry
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(477, -180)
+        Me.PictureBox3.Location = New System.Drawing.Point(716, -277)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(380, 425)
+        Me.PictureBox3.Size = New System.Drawing.Size(570, 654)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 58
         Me.PictureBox3.TabStop = False
@@ -664,9 +704,10 @@ Partial Class registry
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox4.Location = New System.Drawing.Point(0, -180)
+        Me.PictureBox4.Location = New System.Drawing.Point(0, -277)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(379, 425)
+        Me.PictureBox4.Size = New System.Drawing.Size(568, 654)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox4.TabIndex = 57
         Me.PictureBox4.TabStop = False
@@ -676,16 +717,18 @@ Partial Class registry
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Controls.Add(Me.householdmember)
-        Me.Panel3.Location = New System.Drawing.Point(17, 295)
+        Me.Panel3.Location = New System.Drawing.Point(26, 454)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(398, 271)
+        Me.Panel3.Size = New System.Drawing.Size(595, 415)
         Me.Panel3.TabIndex = 35
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!)
-        Me.Label13.Location = New System.Drawing.Point(3, 8)
+        Me.Label13.Location = New System.Drawing.Point(4, 12)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(184, 24)
         Me.Label13.TabIndex = 33
@@ -695,10 +738,11 @@ Partial Class registry
         '
         Me.householdmember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.householdmember.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.SURNAME, Me.FIRSTNAME, Me.LASTNAME, Me.SUFFIX, Me.HOUSEHOLD, Me.PUROK, Me.ADDRESS, Me.BIRTHDATE, Me.SEX, Me.OCCUPATIONSTATUS, Me.CIVILSTATUS, Me.CONTACT})
-        Me.householdmember.Location = New System.Drawing.Point(8, 42)
+        Me.householdmember.Location = New System.Drawing.Point(12, 65)
+        Me.householdmember.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.householdmember.Name = "householdmember"
         Me.householdmember.ReadOnly = True
-        Me.householdmember.Size = New System.Drawing.Size(383, 212)
+        Me.householdmember.Size = New System.Drawing.Size(574, 326)
         Me.householdmember.TabIndex = 27
         '
         'SURNAME
@@ -773,13 +817,75 @@ Partial Class registry
         Me.CONTACT.Name = "CONTACT"
         Me.CONTACT.ReadOnly = True
         '
+        'droppanel
+        '
+        Me.droppanel.Controls.Add(Me.dropbttn3)
+        Me.droppanel.Controls.Add(Me.dropbttn2)
+        Me.droppanel.Controls.Add(Me.dropbttn1)
+        Me.droppanel.Location = New System.Drawing.Point(1407, 10)
+        Me.droppanel.MaximumSize = New System.Drawing.Size(247, 135)
+        Me.droppanel.MinimumSize = New System.Drawing.Size(247, 45)
+        Me.droppanel.Name = "droppanel"
+        Me.droppanel.Size = New System.Drawing.Size(247, 135)
+        Me.droppanel.TabIndex = 47
+        '
+        'dropbttn3
+        '
+        Me.dropbttn3.BackColor = System.Drawing.Color.DimGray
+        Me.dropbttn3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dropbttn3.FlatAppearance.BorderSize = 0
+        Me.dropbttn3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.dropbttn3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dropbttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.dropbttn3.ForeColor = System.Drawing.Color.White
+        Me.dropbttn3.Location = New System.Drawing.Point(0, 90)
+        Me.dropbttn3.Name = "dropbttn3"
+        Me.dropbttn3.Size = New System.Drawing.Size(247, 45)
+        Me.dropbttn3.TabIndex = 21
+        Me.dropbttn3.Text = "Logout"
+        Me.dropbttn3.UseVisualStyleBackColor = False
+        '
+        'dropbttn2
+        '
+        Me.dropbttn2.BackColor = System.Drawing.Color.Gray
+        Me.dropbttn2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dropbttn2.FlatAppearance.BorderSize = 0
+        Me.dropbttn2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
+        Me.dropbttn2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.dropbttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.dropbttn2.ForeColor = System.Drawing.Color.White
+        Me.dropbttn2.Location = New System.Drawing.Point(0, 45)
+        Me.dropbttn2.Name = "dropbttn2"
+        Me.dropbttn2.Size = New System.Drawing.Size(247, 45)
+        Me.dropbttn2.TabIndex = 20
+        Me.dropbttn2.Text = "Change Password"
+        Me.dropbttn2.UseVisualStyleBackColor = False
+        '
+        'dropbttn1
+        '
+        Me.dropbttn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.dropbttn1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dropbttn1.FlatAppearance.BorderSize = 0
+        Me.dropbttn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.dropbttn1.ForeColor = System.Drawing.Color.White
+        Me.dropbttn1.Image = CType(resources.GetObject("dropbttn1.Image"), System.Drawing.Image)
+        Me.dropbttn1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.dropbttn1.Location = New System.Drawing.Point(0, 0)
+        Me.dropbttn1.Name = "dropbttn1"
+        Me.dropbttn1.Size = New System.Drawing.Size(247, 45)
+        Me.dropbttn1.TabIndex = 19
+        Me.dropbttn1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.dropbttn1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage
+        Me.dropbttn1.UseVisualStyleBackColor = True
+        '
         'registry
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(22, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1121, 702)
+        Me.ClientSize = New System.Drawing.Size(1682, 1080)
+        Me.Controls.Add(Me.droppanel)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Button1)
@@ -791,13 +897,12 @@ Partial Class registry
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.PictureBox2)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "registry"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "registry"
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -814,11 +919,11 @@ Partial Class registry
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.householdmember, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.droppanel.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents PictureBox1 As PictureBox
@@ -882,4 +987,9 @@ Partial Class registry
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Panel4 As Panel
+    Friend WithEvents droppanel As Panel
+    Friend WithEvents dropbttn3 As Button
+    Friend WithEvents dropbttn2 As Button
+    Friend WithEvents dropbttn1 As Button
+    Friend WithEvents Timer1 As Timer
 End Class

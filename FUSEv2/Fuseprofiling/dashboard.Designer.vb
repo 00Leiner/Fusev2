@@ -24,10 +24,10 @@ Partial Class dashboard
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(dashboard))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim Title2 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
+        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim Title5 As System.Windows.Forms.DataVisualization.Charting.Title = New System.Windows.Forms.DataVisualization.Charting.Title()
         Me.create = New System.Windows.Forms.Button()
         Me.demographicsbtn = New System.Windows.Forms.Button()
         Me.residentsbtn = New System.Windows.Forms.Button()
@@ -231,52 +231,52 @@ Partial Class dashboard
         Me.Chart1.BackColor = System.Drawing.Color.Transparent
         Me.Chart1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Chart1.BorderlineColor = System.Drawing.Color.Transparent
-        ChartArea2.Area3DStyle.Enable3D = True
-        ChartArea2.Area3DStyle.Inclination = 50
-        ChartArea2.BackColor = System.Drawing.Color.Transparent
-        ChartArea2.BorderColor = System.Drawing.Color.Transparent
-        ChartArea2.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea2)
+        ChartArea5.Area3DStyle.Enable3D = True
+        ChartArea5.Area3DStyle.Inclination = 50
+        ChartArea5.BackColor = System.Drawing.Color.Transparent
+        ChartArea5.BorderColor = System.Drawing.Color.Transparent
+        ChartArea5.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea5)
         Me.Chart1.Cursor = System.Windows.Forms.Cursors.No
         Me.Chart1.Enabled = False
-        Legend2.BackColor = System.Drawing.Color.Transparent
-        Legend2.Name = "Legend1"
-        Legend2.Position.Auto = False
-        Legend2.Position.Height = 41.77778!
-        Legend2.Position.Width = 14.88251!
-        Legend2.Position.X = 82.11749!
-        Legend2.Position.Y = 4.0!
-        Me.Chart1.Legends.Add(Legend2)
+        Legend5.BackColor = System.Drawing.Color.Transparent
+        Legend5.Name = "Legend1"
+        Legend5.Position.Auto = False
+        Legend5.Position.Height = 41.77778!
+        Legend5.Position.Width = 14.88251!
+        Legend5.Position.X = 82.11749!
+        Legend5.Position.Y = 4.0!
+        Me.Chart1.Legends.Add(Legend5)
         Me.Chart1.Location = New System.Drawing.Point(206, 535)
         Me.Chart1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Chart1.Name = "Chart1"
         Me.Chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale
-        Series2.BackImageTransparentColor = System.Drawing.Color.Transparent
-        Series2.BackSecondaryColor = System.Drawing.Color.Transparent
-        Series2.BorderColor = System.Drawing.Color.Transparent
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
-        Series2.Color = System.Drawing.Color.Transparent
-        Series2.LabelBackColor = System.Drawing.Color.Transparent
-        Series2.LabelBorderColor = System.Drawing.Color.Transparent
-        Series2.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet
-        Series2.LabelForeColor = System.Drawing.Color.Transparent
-        Series2.Legend = "Legend1"
-        Series2.MarkerBorderColor = System.Drawing.Color.Transparent
-        Series2.MarkerColor = System.Drawing.Color.Transparent
-        Series2.MarkerImageTransparentColor = System.Drawing.Color.Transparent
-        Series2.Name = "Series1"
-        Me.Chart1.Series.Add(Series2)
+        Series5.BackImageTransparentColor = System.Drawing.Color.Transparent
+        Series5.BackSecondaryColor = System.Drawing.Color.Transparent
+        Series5.BorderColor = System.Drawing.Color.Transparent
+        Series5.ChartArea = "ChartArea1"
+        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie
+        Series5.Color = System.Drawing.Color.Transparent
+        Series5.LabelBackColor = System.Drawing.Color.Transparent
+        Series5.LabelBorderColor = System.Drawing.Color.Transparent
+        Series5.LabelBorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.NotSet
+        Series5.LabelForeColor = System.Drawing.Color.Transparent
+        Series5.Legend = "Legend1"
+        Series5.MarkerBorderColor = System.Drawing.Color.Transparent
+        Series5.MarkerColor = System.Drawing.Color.Transparent
+        Series5.MarkerImageTransparentColor = System.Drawing.Color.Transparent
+        Series5.Name = "Series1"
+        Me.Chart1.Series.Add(Series5)
         Me.Chart1.Size = New System.Drawing.Size(814, 400)
         Me.Chart1.TabIndex = 5
         Me.Chart1.Text = "Chart1"
-        Title2.Name = "Title1"
-        Title2.Position.Auto = False
-        Title2.Position.Height = 6.636756!
-        Title2.Position.X = 20.0!
-        Title2.Position.Y = 10.0!
-        Title2.Text = "SEX:"
-        Me.Chart1.Titles.Add(Title2)
+        Title5.Name = "Title1"
+        Title5.Position.Auto = False
+        Title5.Position.Height = 6.636756!
+        Title5.Position.X = 20.0!
+        Title5.Position.Y = 10.0!
+        Title5.Text = "SEX:"
+        Me.Chart1.Titles.Add(Title5)
         '
         'Label2
         '
@@ -479,7 +479,7 @@ Partial Class dashboard
         Me.droppanel.Controls.Add(Me.dropbttn3)
         Me.droppanel.Controls.Add(Me.dropbttn2)
         Me.droppanel.Controls.Add(Me.dropbttn1)
-        Me.droppanel.Location = New System.Drawing.Point(103, 784)
+        Me.droppanel.Location = New System.Drawing.Point(1407, 12)
         Me.droppanel.MaximumSize = New System.Drawing.Size(247, 135)
         Me.droppanel.MinimumSize = New System.Drawing.Size(247, 45)
         Me.droppanel.Name = "droppanel"
@@ -523,6 +523,8 @@ Partial Class dashboard
         Me.dropbttn1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.dropbttn1.Dock = System.Windows.Forms.DockStyle.Top
         Me.dropbttn1.FlatAppearance.BorderSize = 0
+        Me.dropbttn1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.dropbttn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.dropbttn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.dropbttn1.ForeColor = System.Drawing.Color.White
         Me.dropbttn1.Image = CType(resources.GetObject("dropbttn1.Image"), System.Drawing.Image)

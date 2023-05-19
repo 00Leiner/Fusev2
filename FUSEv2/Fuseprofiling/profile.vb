@@ -54,7 +54,7 @@ Public Class profile
         lblcontact.Text = _contact
         lblsuffix.Text = _suffix
         lblmname.Text = _middlename
-        vbcvbcv.Text = _purok
+        lblpurok.Text = _purok
         'Display the image in the PictureBox
         PictureBox1.Image = _selectedImage
 

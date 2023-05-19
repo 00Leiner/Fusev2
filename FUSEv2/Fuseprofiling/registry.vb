@@ -2,8 +2,12 @@
 Imports AForge.Video
 Imports AForge.Video.DirectShow
 Imports System.IO
+Imports System.Threading
 
 Public Class registry
+    Dim isCollapsed As Boolean = True
+    Dim iscollapsed3 As Boolean = True
+
     'setup connection for camera
     Dim camera As VideoCaptureDevice
     Dim bmp As Bitmap
@@ -272,7 +276,7 @@ Public Class registry
         End Using
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
         Dim logout As DialogResult = MessageBox.Show("Are you sure you want to logout?", "logout", MessageBoxButtons.YesNo)
         If logout = DialogResult.Yes Then
             Me.Close()
@@ -327,6 +331,41 @@ Public Class registry
     Private Sub registry_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         'cleare everytime the form closed
         clearText()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If isCollapsed Then
+
+            droppanel.Height += 10
+            If droppanel.Size = droppanel.MaximumSize Then
+                Timer1.Stop()
+                isCollapsed = False
+            End If
+        Else
+            droppanel.Height -= 10
+            If droppanel.Size = droppanel.MinimumSize Then
+                Timer1.Stop()
+                isCollapsed = True
+            End If
+        End If
+    End Sub
+
+    Private Sub dropbttn1_Click(sender As Object, e As EventArgs) Handles dropbttn1.Click
+        iscollapsed3 = False
+
+        Timer1.Start()
+    End Sub
+
+    Private Sub dropbttn3_Click(sender As Object, e As EventArgs) Handles dropbttn3.Click
+        Dim logout As DialogResult = MessageBox.Show("Are you sure you want to logout?", "logout", MessageBoxButtons.YesNo)
+        If logout = DialogResult.Yes Then
+            Me.Hide()
+            Form1.Show()
+        End If
+    End Sub
+
+    Private Sub dropbttn2_Click(sender As Object, e As EventArgs) Handles dropbttn2.Click
+        changepass.Show()
     End Sub
 
 End Class

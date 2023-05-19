@@ -85,6 +85,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="changepass.Designer.vb">
+      <DependentUpon>changepass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="changepass.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TCamera.Designer.vb">
       <DependentUpon>TCamera.vb</DependentUpon>
     </Compile>
@@ -170,6 +176,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="changepass.resx">
+      <DependentUpon>changepass.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TCamera.resx">
       <DependentUpon>TCamera.vb</DependentUpon>
     </EmbeddedResource>

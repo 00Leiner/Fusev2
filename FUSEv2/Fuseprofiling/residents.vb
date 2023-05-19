@@ -2,6 +2,10 @@
 Imports System.IO
 
 Public Class residents
+    Dim isCollapsed As Boolean = True
+    Dim isCollapsed1 As Boolean = True
+
+
     'call GetConnection() from dbconnection.vb
     Dim conn As OleDbConnection = DatabaseConnection.GetConnection()
     'adapting query
@@ -197,7 +201,37 @@ Public Class residents
         registry.Show()
     End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
+        Dim logout As DialogResult = MessageBox.Show("Are you sure you want to logout?", "logout", MessageBoxButtons.YesNo)
+        If logout = DialogResult.Yes Then
+            Me.Hide()
+            Form1.Show()
+        End If
+    End Sub
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If isCollapsed Then
+
+            droppanel.Height += 10
+            If droppanel.Size = droppanel.MaximumSize Then
+                Timer1.Stop()
+                isCollapsed = False
+            End If
+        Else
+            droppanel.Height -= 10
+            If droppanel.Size = droppanel.MinimumSize Then
+                Timer1.Stop()
+                isCollapsed = True
+            End If
+        End If
+    End Sub
+
+    Private Sub dropbttn1_Click(sender As Object, e As EventArgs) Handles dropbttn1.Click
+        isCollapsed1 = False
+
+        Timer1.Start()
+    End Sub
+
+    Private Sub dropbttn3_Click(sender As Object, e As EventArgs) Handles dropbttn3.Click
         Dim logout As DialogResult = MessageBox.Show("Are you sure you want to logout?", "logout", MessageBoxButtons.YesNo)
         If logout = DialogResult.Yes Then
             Me.Hide()
@@ -205,4 +239,7 @@ Public Class residents
         End If
     End Sub
 
+    Private Sub dropbttn2_Click(sender As Object, e As EventArgs) Handles dropbttn2.Click
+        changepass.Show()
+    End Sub
 End Class
