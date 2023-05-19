@@ -1,8 +1,4 @@
 ﻿Imports System.Data.OleDb
-Imports AForge
-Imports AForge.Video
-Imports AForge.Video.DirectShow
-Imports System.IO
 Public Class UpdateForm
     'call GetConnection() from dbconnection.vb
     Dim conn As OleDbConnection = DatabaseConnection.GetConnection()
@@ -83,12 +79,12 @@ Public Class UpdateForm
     'update button
     Private Sub updatebtn_Click(sender As Object, e As EventArgs) Handles updatebtn.Click
         'hold the user if the box is empty
-        If String.IsNullOrEmpty(firstbox.Text) Then
-            MessageBox.Show("Please fill the First Name.")
+        If String.IsNullOrEmpty(surnamebox.Text) Then
+            MessageBox.Show("Please fill the Surname")
             Return
         End If
-        If String.IsNullOrEmpty(surnamebox.Text) Then
-            MessageBox.Show("Please fill the Last Name")
+        If String.IsNullOrEmpty(firstbox.Text) Then
+            MessageBox.Show("Please fill the First Name.")
             Return
         End If
         If String.IsNullOrEmpty(middlebox.Text) Then

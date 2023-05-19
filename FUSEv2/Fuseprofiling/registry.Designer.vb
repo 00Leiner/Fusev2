@@ -87,8 +87,6 @@ Partial Class registry
         Me.OCCUPATIONSTATUS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CIVILSTATUS = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CONTACT = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -363,8 +361,6 @@ Partial Class registry
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Controls.Add(Me.Label18)
         Me.Panel2.Controls.Add(Me.Label5)
         Me.Panel2.Controls.Add(Me.householdbox)
         Me.Panel2.Controls.Add(Me.suffixbox)
@@ -419,7 +415,7 @@ Partial Class registry
         Me.suffixbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.suffixbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.suffixbox.FormattingEnabled = True
-        Me.suffixbox.Items.AddRange(New Object() {"N/A", "Sr", "Jr", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "Ma."})
+        Me.suffixbox.Items.AddRange(New Object() {"", "Sr", "Jr", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "Ma."})
         Me.suffixbox.Location = New System.Drawing.Point(711, 39)
         Me.suffixbox.Name = "suffixbox"
         Me.suffixbox.Size = New System.Drawing.Size(89, 32)
@@ -491,7 +487,7 @@ Partial Class registry
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label7.Location = New System.Drawing.Point(398, 83)
+        Me.Label7.Location = New System.Drawing.Point(319, 83)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(72, 20)
         Me.Label7.TabIndex = 21
@@ -501,7 +497,7 @@ Partial Class registry
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(244, 83)
+        Me.Label6.Location = New System.Drawing.Point(170, 83)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(54, 20)
         Me.Label6.TabIndex = 20
@@ -588,7 +584,7 @@ Partial Class registry
         Me.purokbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.purokbox.FormattingEnabled = True
         Me.purokbox.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        Me.purokbox.Location = New System.Drawing.Point(248, 106)
+        Me.purokbox.Location = New System.Drawing.Point(171, 107)
         Me.purokbox.Name = "purokbox"
         Me.purokbox.Size = New System.Drawing.Size(121, 32)
         Me.purokbox.TabIndex = 11
@@ -605,12 +601,12 @@ Partial Class registry
         'addressbox
         '
         Me.addressbox.Cursor = System.Windows.Forms.Cursors.No
-        Me.addressbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.addressbox.Location = New System.Drawing.Point(397, 109)
+        Me.addressbox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.addressbox.Location = New System.Drawing.Point(319, 109)
         Me.addressbox.Multiline = True
         Me.addressbox.Name = "addressbox"
         Me.addressbox.ReadOnly = True
-        Me.addressbox.Size = New System.Drawing.Size(229, 29)
+        Me.addressbox.Size = New System.Drawing.Size(307, 29)
         Me.addressbox.TabIndex = 5
         Me.addressbox.Text = "Brgy. Masapang, Victory, Laguna"
         '
@@ -777,25 +773,6 @@ Partial Class registry
         Me.CONTACT.Name = "CONTACT"
         Me.CONTACT.ReadOnly = True
         '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
-        Me.Label18.Location = New System.Drawing.Point(160, 83)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(36, 20)
-        Me.Label18.TabIndex = 35
-        Me.Label18.Text = "Lot:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.TextBox1.Location = New System.Drawing.Point(164, 109)
-        Me.TextBox1.MaxLength = 4
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(68, 29)
-        Me.TextBox1.TabIndex = 36
-        '
         'registry
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -905,6 +882,4 @@ Partial Class registry
     Friend WithEvents PictureBox6 As PictureBox
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label18 As Label
 End Class
